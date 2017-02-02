@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RssReader</string>
+    <string name="title_activity_open_website">OpenWebsite</string>
+    <string name="title_activity_display_feeds">DisplayFeeds</string>
+    <string name="toolbar">WSJ RSS Feeds</string>
+    <string name="serif">sans-serif-black</string>
+</resources>

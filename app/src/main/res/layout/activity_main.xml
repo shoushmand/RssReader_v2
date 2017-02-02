@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#d3d3d3"
+    tools:context="com.example.sahar.rssreader.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@android:style/Theme.NoTitleBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#778899"
+        >
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/toolbar_title"
+            android:text="@string/toolbar"
+        android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@string/serif"
+        android:textColor="@color/cardview_dark_background"
+        />
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/feed_list"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_top">
+    </ListView>
+
+
+</RelativeLayout>
