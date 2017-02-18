@@ -52,6 +52,7 @@
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/image"
            android:lines="2"
+           android:ellipsize="end"
            android:layout_marginLeft="10dp"
            android:layout_marginRight="10dp"
            android:layout_marginBottom="7dp"/>
