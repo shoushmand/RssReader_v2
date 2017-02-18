@@ -69,8 +69,8 @@ public class FetchRss extends AsyncTask<String,Void,Void> {
 
         for(int i = 0; i < items.getLength(); i++){
             RssItem rssItem = new RssItem();
-            NodeList children = items.item(i).getChildNodes();{
-                for(int j = 0; j < children.getLength();j++){
+            NodeList children = items.item(i).getChildNodes();
+            for(int j = 0; j < children.getLength();j++){
                     Node node = children.item(j);
                     if(node.getNodeName().equalsIgnoreCase("title")){
                         rssItem.setTitle(node.getTextContent());
@@ -91,10 +91,10 @@ public class FetchRss extends AsyncTask<String,Void,Void> {
                          rssItem.setLink(node.getTextContent());
 
                     }
-                }
-                rssItems.add(rssItem);
-
             }
+            rssItems.add(rssItem);
+
+
         }
 
     }

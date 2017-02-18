@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class DisplayFeeds extends AppCompatActivity {
     private RecyclerView mRecyclerView;
+    FetchRss fetchRss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +21,9 @@ public class DisplayFeeds extends AppCompatActivity {
         setContentView(R.layout.activity_display_feeds);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_top);
         TextView mTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
        // mRecyclerView.setHasFixedSize(true);
         Intent i = getIntent();
@@ -30,9 +31,15 @@ public class DisplayFeeds extends AppCompatActivity {
         String feed = i.getStringExtra("feed");
         mTitle.setText(feed);
 
-        FetchRss fetchRss = new FetchRss(this, mRecyclerView);
+        fetchRss = new FetchRss(this, mRecyclerView);
         fetchRss.execute(link);
 
+    }
+    public void onStop(){
+        super.onStop();
+        if(fetchRss != null){
+            fetchRss.cancel(true);
+        }
     }
 
 }

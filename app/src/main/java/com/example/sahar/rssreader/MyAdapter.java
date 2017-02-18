@@ -7,14 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
 
 /**
  * Created by sahar on 1/31/2017.
@@ -49,7 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent = new Intent(v.getContext(), ShowDetails.class);
+                    Intent intent = new Intent(v.getContext(), StoryActivity.class);
 
                     intent.putExtra("item", i);
                     v.getContext().startActivity(intent);
@@ -95,9 +92,5 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         return items != null ? items.size(): 0;
     }
-    @Override
-    public void onAttachedToRecyclerView(RecyclerView recyclerView)
-    {
-        super.onAttachedToRecyclerView(recyclerView);
-    }
+
 }
