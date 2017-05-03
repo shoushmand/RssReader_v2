@@ -13,7 +13,9 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 
-public class StoryActivity extends AppCompatActivity implements StoryFragment.OnFragmentInteractionListener {
+public class StoryActivity extends AppCompatActivity {
+
+//public class StoryActivity extends AppCompatActivity implements StoryFragment.OnFragmentInteractionListener {
     TextView title;
     TextView description;
     TextView pubDate;
@@ -28,21 +30,7 @@ public class StoryActivity extends AppCompatActivity implements StoryFragment.On
         StoryFragment storyFragment = StoryFragment.newInstance(item);
         getSupportFragmentManager().beginTransaction().add(R.id.container, storyFragment).commit();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*    title = (TextView)findViewById(R.id.title);
+       title = (TextView)findViewById(R.id.title);
         description = (TextView)findViewById(R.id.description);
         pubDate = (TextView)findViewById(R.id.date);
         content = (ImageView)findViewById(R.id.image);
@@ -60,7 +48,7 @@ public class StoryActivity extends AppCompatActivity implements StoryFragment.On
         String[] date = item.getPubDate().split(" ");
         String[] time = date[4].split(":");
         String newDate = date[1]+ " "+ date[2]+ ", " + time[0] + ":" + time[1];
-        pubDate.setText(newDate);*/
+        pubDate.setText(newDate);
 
 
 
@@ -71,10 +59,10 @@ public class StoryActivity extends AppCompatActivity implements StoryFragment.On
 
     }
 
-
+/*
     @Override
     public void onFragmentInteraction(String title) {
         Toast.makeText(this, title, Toast.LENGTH_LONG).show();
 
-    }
+    }*/
 }
